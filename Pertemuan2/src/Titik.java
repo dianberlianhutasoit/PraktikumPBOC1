@@ -6,23 +6,28 @@ Tanggal         : 26/02/2026
 
 public class Titik {
     /* ATRIBUT */
-    double absis;
-    double ordinat;
-    static int counterTitik = 0;
+    private double absis;
+    private double ordinat;
+    private static int counterTitik = 0;
 
     /* METHOD */
     //Konstruktor untuk membuat titik (0, 0)
-    Titik() {
-        this(0,0);
+    public Titik() {
+        this (0, 0);
+        counterTitik++;
+    }
+    
+    public static int getCounterTitik() {
+        return counterTitik;
     }
 
-    Titik(double absis, double ordinat) {
+    public Titik(double absis, double ordinat) {
         this.absis = absis;
         this.ordinat = ordinat;
         counterTitik++;
     }
 
-    void printCounterTitik() {
+    public void printCounterTitik() {
         System.out.println(Titik.counterTitik);
     }
 
@@ -32,12 +37,8 @@ public class Titik {
     }
 
     //Mengembalikan nilai ordinat
-    double getOrdinat(){
+    public double getOrdinat(){
         return ordinat;
-    }
-
-    static int getCounterTitik() {
-        return counterTitik;
     }
 
     //Mengeset absis titik dengan nilai baru x
