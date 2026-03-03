@@ -29,6 +29,8 @@ public class MTitik {
 
         /* ********************** */
         Titik T1 = new Titik();
+        Titik T2 = new Titik(2, 2);
+        
         System.out.println("Nilai Absis T1 adalah : " + T1.getAbsis());
         System.out.println("Nilai Ordinat T1 adalah : " + T1.getOrdinat());
         T1.setAbsis(3);
@@ -44,7 +46,6 @@ public class MTitik {
 
         System.out.println("Jarak titik T1 saat ini dengan Pusat adalah : " + T1.getJarakPusat());
 
-        Titik T2 = new Titik(2, 2);
         System.out.println("Jarak titik T2 terhadap titik T1 adalah : " + T2.getJarak(T1));
         T2.refleksiX();
         T2.refleksiY();
