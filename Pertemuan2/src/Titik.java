@@ -14,17 +14,17 @@ public class Titik {
     //Konstruktor untuk membuat titik (0, 0)
     public Titik() {
         this (0, 0);
-        counterTitik++;
     }
     
-    public static int getCounterTitik() {
-        return counterTitik;
-    }
-
+    
     public Titik(double absis, double ordinat) {
         this.absis = absis;
         this.ordinat = ordinat;
         counterTitik++;
+    }
+
+    public static int getCounterTitik() {
+        return counterTitik;
     }
 
     public void printCounterTitik() {
@@ -35,34 +35,34 @@ public class Titik {
     public double getAbsis() {
         return absis;
     }
-
+    
     //Mengembalikan nilai ordinat
     public double getOrdinat(){
         return ordinat;
     }
-
+    
     //Mengeset absis titik dengan nilai baru x
-    void setAbsis(double x) {
+    public void setAbsis(double x) {
         this.absis = x;
     }
-
+    
     //Mengeset ordinaat titik dengan nilai baru y
-    void setOrdinat(double y) {
+    public void setOrdinat(double y) {
         this.ordinat = y;
+    }
+    //Mencetak koordinat titik
+    public void printTitik() {
+        System.out.println(absis + "," + ordinat);
     }
 
     //Menggeser nilai absis dan ordinat titik masing-masing sejauh x dan y
-    void geser(double x, double y) {
+    public void geser(double x, double y) {
         absis = absis + x;
         ordinat = ordinat + y;
     }
 
-    //Mencetak koordinat titik
-    void printTitik() {
-        System.out.println("Titik (" + absis + "," + ordinat + ")");
-    }
 
-    int getKuadran() {
+    public int getKuadran() {
         if (absis > 0 && ordinat > 0) {
             return 1;
         }
@@ -78,6 +78,16 @@ public class Titik {
         else {
             return 0;
         }
+    }
+
+    public double getJarakPusat() {
+        return Math.sqrt((absis*absis) + (ordinat*ordinat));
+    }
+
+    public double getJarak(Titik T) {
+        double dx = T.absis - this.absis;
+        double dy = T.ordinat - this.ordinat;
+        return Math.sqrt((dx*dx) + (dy*dy));
     }
 
     public void refleksiX() {
