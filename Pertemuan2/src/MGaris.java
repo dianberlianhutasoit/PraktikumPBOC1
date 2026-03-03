@@ -1,5 +1,5 @@
 /* Nama File    : MGaris.java
-Deskripsi       : Berisi atribut dan Method dalam Class Titik
+Deskripsi       : Berisi atribut dan Method dalam Class Garis
 Pembuat         : Dian Berlian Hutasoit
 Tanggal         : 03/03/2026
 */
