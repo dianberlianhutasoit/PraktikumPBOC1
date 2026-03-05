@@ -85,13 +85,4 @@ public class Garis {
     public void printGaris() {
         System.out.println("(" + this.TitikAwal.getAbsis() + "," + this.TitikAwal.getOrdinat() +")" + " (" + this.TitikAkhir.getAbsis() + "," + this.TitikAkhir.getOrdinat() + ")");
     }
-
-
-
-
-    
-
-    
-
-
 }
