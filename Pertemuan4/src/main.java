@@ -1,5 +1,5 @@
 /* Nama File    : main.java
-Deskripsi       : Berisi driver class Bangun Datar, Lingkaran, dan Persegi 
+Deskripsi       : Berisi driver untuk menguji method yang ada pada class Bangun Datar, Lingkaran, dan Persegi 
 Pembuat         : Dian Berlian Hutasoit
 Tanggal         : 12 Maret 2026
 LAB             : C1

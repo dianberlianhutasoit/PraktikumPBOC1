@@ -1,7 +1,7 @@
 /* Nama File    : BangunDatar.java
 Deskripsi       : Berisi atribut dan Method dalam Class Bangun Datar
 Pembuat         : Dian Berlian Hutasoit
-Tanggal         : 6 Maret 2026
+Tanggal         : 12 Maret 2026
 LAB             : C1
 */
 
