@@ -5,7 +5,7 @@ Tanggal         : 12 Maret 2026
 LAB             : C1
 */
 
-public class main {
+public class mainBangunDatar {
     public static void main(String[] args) {
         Persegi P1 = new Persegi();
         P1.printInfo();
@@ -26,7 +26,7 @@ public class main {
         P1.setWarna("merah");
         P1.setBorder("Coklat");
         System.out.println("Warna dari Persegi P1 adalah " + P1.getWarna());
-        System.err.println("Border dari Persegi P1 adalah " + P1.getBorder());
+        System.out.println("Border dari Persegi P1 adalah " + P1.getBorder());
         System.out.println();
 
         P1.printInfo();
