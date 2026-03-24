@@ -13,7 +13,7 @@ public class Mahasiswa {
     private String Nama;
     private String Prodi;
     ArrayList<MataKuliah> listMatkul;
-    private Dosen dosenWali;
+    private dosen dosenWali;
     private Kendaraan kendaraan;
 
     /* --- METHOD --- */
@@ -54,7 +54,7 @@ public class Mahasiswa {
     }
 
     // Method untuk mengambil data dosen wali mahasiswa
-    public Dosen getDosenWali() {
+    public dosen getDosenWali() {
         return dosenWali;
     }
 
@@ -90,7 +90,7 @@ public class Mahasiswa {
     // METHOD AGREGASI
 
     // Method untuk menetapkan dosen wali mahasiswa
-    public void setDosenWali(Dosen dosenWali) {
+    public void setDosenWali(dosen dosenWali) {
         this.dosenWali = dosenWali;
     }
 
