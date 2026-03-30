@@ -32,18 +32,6 @@ public abstract class BangunDatar {
         this.border = border;
         counterBangunDatar++;
     }
-
-    /* ABSTRACT METHOD */
-    // Menghitung luas bangun datar 
-    public abstract double getLuas();
-
-    // Menghitung keliling bangun datar 
-    public abstract double getKeliling();
-
-    // Mencetak jumlah objek yang sudah dibuat 
-    public static void printCounterBangunDatar() {
-        System.out.println("Jumlah Objek Bangun Datar : " + counterBangunDatar);
-    }
     
     /* SELEKTOR */
     // Mengambil nilai jumlah sisi
@@ -82,6 +70,19 @@ public abstract class BangunDatar {
     {
         this.border = border;
     }
+    
+    /* ABSTRACT METHOD */
+    // Menghitung luas bangun datar 
+    public abstract double getLuas();
+
+    // Menghitung keliling bangun datar 
+    public abstract double getKeliling();
+
+    // Mencetak jumlah objek yang sudah dibuat 
+    public static void printCounterBangunDatar() {
+        System.out.println("Jumlah Objek Bangun Datar : " + counterBangunDatar);
+    }
+    
 
     /* METHOD LAIN */
     // Mencetak informasi umum bangun datar
