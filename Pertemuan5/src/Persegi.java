@@ -1,5 +1,5 @@
 /* Nama File    : Persegi.java
-Deskripsi       : Berisi atribut dan Method dalam Class Bangun Datar
+Deskripsi       : Berisi atribut dan Method dalam Class Persegi
 Pembuat         : Dian Berlian Hutasoit
 Tanggal         : 12 Maret 2026
 LAB             : C1
@@ -26,32 +26,35 @@ public class Persegi extends BangunDatar implements IResize{
     }
     
     /* SELEKTOR */
+    // Mengambil nilai sisi
     public double getSisi()
     {
         return this.sisi;
     }
     
     /* MUTATOR */
+    // Mengubah atau menetapkan nilai sisi
     public void setSisi(double sisi)
     {
         this.sisi = sisi;
     }
 
-    // IMPLEMENTASI ABSTRACT METHOD DARI BangunDatar
+    /* IMPLEMENTASI ABSTRACT METHOD DARI BangunDatar */
+    // Menghitung luas persegi
     @Override
     public double getLuas()
     {
         return this.sisi * this.sisi;
     }
 
+    // Menghitung keliling persegi
     @Override
     public double getKeliling()
     {
         return 4 * this.sisi;
     }
 
-    // IMPLEMENTASI METHOD dari Interface IResize
-   
+    /* IMPLEMENTASI METHOD dari Interface IResize */
     // Menambah ukuran sisi menjadi 10% lebih besar
     @Override
     public void zoomIn() { 
@@ -71,7 +74,7 @@ public class Persegi extends BangunDatar implements IResize{
 
 
     /* METHOD LAIN */
-
+    // Menampilkan info lengkap persegi
     public void printInfo()
     {
         super.printInfo(); 
@@ -81,5 +84,3 @@ public class Persegi extends BangunDatar implements IResize{
     }
     
 }
-
-

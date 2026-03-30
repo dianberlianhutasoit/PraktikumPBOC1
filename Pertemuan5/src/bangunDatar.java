@@ -1,5 +1,5 @@
 /* Nama File    : BangunDatar.java
-Deskripsi       : Berisi atribut dan Method dalam Class Bangun Datar
+Deskripsi       : Berisi atribut dan Method dalam Class Bangun Datar (Abstract)
 Pembuat         : Dian Berlian Hutasoit
 Tanggal         : 26 Maret 2026
 LAB             : C1
@@ -33,8 +33,7 @@ public abstract class BangunDatar {
         counterBangunDatar++;
     }
 
-    // ABSTRACT METHOD
-
+    /* ABSTRACT METHOD */
     // Menghitung luas bangun datar 
     public abstract double getLuas();
 
@@ -47,41 +46,44 @@ public abstract class BangunDatar {
     }
     
     /* SELEKTOR */
+    // Mengambil nilai jumlah sisi
     public int getJmlSisi()
     {
         return jmlSisi;
     }
     
-    
+    // Mengambil nilai warna
     public String getWarna()
     {
         return warna;
     }
     
+    // Mengambil nilai border
     public String getBorder()
     {
         return border;
     }
     
     /* MUTATOR */
-    
+    // Mengubah atau menetapkan nilai jumlah sisi
     public void setJmlSisi(int jmlSisi)
     {
         this.jmlSisi = jmlSisi;
     }
     
+    // Mengubah atau menetapkan nilai warna
     public void setWarna(String warna)
     {
         this.warna = warna;
     }
     
+    // Mengubah atau menetapkan nilai border
     public void setBorder(String border)
     {
         this.border = border;
     }
 
     /* METHOD LAIN */
-
     // Mencetak informasi umum bangun datar
     public void printInfo()
     {
@@ -90,7 +92,7 @@ public abstract class BangunDatar {
         System.out.println("Border: " + border);
     }
 
-    // Method Perbandingan 
+    /* Method Perbandingan */ 
 
     // Mengecek apakah luas objek ini sama dengan objek lain
     public boolean isEqualLuas(BangunDatar X) {
@@ -102,8 +104,3 @@ public abstract class BangunDatar {
         return this.getKeliling() == X.getKeliling();
     }  
 }
-
-
-
-
-
