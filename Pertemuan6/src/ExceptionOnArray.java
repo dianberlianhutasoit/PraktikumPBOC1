@@ -10,8 +10,11 @@ public class ExceptionOnArray {
      * Menjalankan contoh akses array dan menunjukkan
      * penanganan exception ketika indeks melebihi batas array.
      */
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         // instansiasi object array integer
+        /* ATRIBUT */
         Integer[] arrayInteger = new Integer[4];
         try {
             arrayInteger[2] = 11;

@@ -8,49 +8,39 @@
  * @author DIAN BERLIAN
  */
 
-/* Nama File    : Gui3.java
-Deskripsi       : Program GUI sederhana untuk menambahkan, menghapus, memperbarui data dari TextField ke JList, serta menyimpan data dari JList ke dalam List
-Pembuat         : Dian Berlian Hutasoit
-Tanggal         : 26 Mei 2026
-LAB             : C1
-*/
-
+import javax.swing.DefaultListModel;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.DefaultListModel;
 
-public class Gui3 extends javax.swing.JFrame {
-    DefaultListModel<String> dlm;  // Menampung data item yang akan ditampilkan
-    List<String> items = new ArrayList<>(); // Menyimpan data dari JList ke dalam List
-    String[] datas = {"buku", "meja", "kursi", "tas", "pintu"}; // Data awal
+public class GuiCollection extends javax.swing.JFrame {
+    
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(GuiCollection.class.getName());
 
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Gui3.class.getName());
-
+    DefaultListModel<String> dlm;
+    List<String> items = new ArrayList<>();
+    String[] datas = {"buku", "meja", "kursi", "tas", "pintu"};
+    
     /**
-     * Creates new form Gui3
+     * Creates new form GuiCollection
      */
-    // Konstruktor
-    public Gui3() {
-        initComponents(); // Menginisialisasi semua komponen GUI
-        dlm = new DefaultListModel<>(); 
-        jListItem.setModel(dlm); // Menghubungkan model JList dengan model data
+    public GuiCollection() {
+        initComponents();
+        dlm = new DefaultListModel<>();
+        jListItem.setModel(dlm);
         
         for (String data : datas) {
-            dlm.addElement(data); // Menambahkan data awal ke dalam model JList
-            updateJumDataTersimpan(); // Memperbarui label jumlah data tersimpan setiap data ditambahkan
+            dlm.addElement(data);
+            updateJumDataTersimpan();
         }
     }
     
-    // Mutator
-    // Memperbarui jumlah data tersimpan berdasarkan ukuran List items
     private void updateJumDataTersimpan() {
-        jLabelJumlahData.setText(
-                "Data  tersimpan = " + items.size());
+    jLabelJumlahData.setText(
+        "Data Tersimpan = " + items.size());
     }
     
-    // Menambahkan item baru ke dalam model JList
     private void addItem(String namaItem) {
-        dlm.addElement(namaItem); // Menambah data baru kedalam model JList
+        dlm.addElement(namaItem);
     }
 
     /**
@@ -89,9 +79,9 @@ public class Gui3 extends javax.swing.JFrame {
         jButtonSaveData.setText("save data");
         jButtonSaveData.addActionListener(this::jButtonSaveDataActionPerformed);
 
-        jLabelJumlahData.setText("Data Tersimpan = 0");
+        jLabelJumlahData.setText("Data tersimpan = 0");
 
-        jLabelItem.setText("Item name : ");
+        jLabelItem.setText("Item name: ");
 
         jTextFieldItem.addActionListener(this::jTextFieldItemActionPerformed);
 
@@ -112,69 +102,65 @@ public class Gui3 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButtonSaveData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonInsertData, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(57, 57, 57)
-                        .addComponent(jLabelJumlahData, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE))
+                        .addComponent(jButtonInsertData)
+                        .addGap(27, 27, 27)
+                        .addComponent(jLabelJumlahData, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonSaveData, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButtonDelete)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonClearAll))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButtonAddItem)
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextFieldItem, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButtonUpdate))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabelItem))
+                            .addComponent(jButtonAddItem)
+                            .addComponent(jButtonDelete))
+                        .addGap(24, 24, 24)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonClearAll)
+                            .addComponent(jButtonUpdate)
+                            .addComponent(jTextFieldItem, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 40, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 47, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButtonInsertData)
-                            .addComponent(jLabelJumlahData))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonSaveData)
-                        .addGap(48, 48, 48)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabelItem)
-                            .addComponent(jTextFieldItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonUpdate)
-                            .addComponent(jButtonAddItem))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButtonDelete)
-                            .addComponent(jButtonClearAll)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonInsertData)
+                    .addComponent(jLabelJumlahData))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonSaveData)
+                .addGap(42, 42, 42)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelItem)
+                    .addComponent(jTextFieldItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonAddItem)
+                    .addComponent(jButtonUpdate))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonDelete)
+                    .addComponent(jButtonClearAll))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonInsertDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInsertDataActionPerformed
-        for (String item : items) {
-            dlm.addElement(item); // Menambahkan setiap item dari List items ke dalam model JList
-        }
-    }//GEN-LAST:event_jButtonInsertDataActionPerformed
+    private void jButtonClearAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearAllActionPerformed
+        // TODO add your handling code here:
+        dlm.clear();
+    }//GEN-LAST:event_jButtonClearAllActionPerformed
 
     private void jButtonSaveDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveDataActionPerformed
+        // TODO add your handling code here:
         if (!items.isEmpty()) {
             items.clear();
         }
@@ -186,11 +172,22 @@ public class Gui3 extends javax.swing.JFrame {
         updateJumDataTersimpan();
     }//GEN-LAST:event_jButtonSaveDataActionPerformed
 
-    private void jTextFieldItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldItemActionPerformed
+    private void jButtonInsertDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInsertDataActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldItemActionPerformed
+        for (String item : items) {
+            dlm.addElement(item);
+        }
+    }//GEN-LAST:event_jButtonInsertDataActionPerformed
+
+    private void jButtonAddItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddItemActionPerformed
+        // TODO add your handling code here:
+        addItem(jTextFieldItem.getText());
+        
+        jTextFieldItem.setText("");
+    }//GEN-LAST:event_jButtonAddItemActionPerformed
 
     private void jButtonUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonUpdateActionPerformed
+        // TODO add your handling code here:
         int index = jListItem.getSelectedIndex();
         String selected = jTextFieldItem.getText();
         dlm.setElementAt(selected, index);
@@ -198,22 +195,17 @@ public class Gui3 extends javax.swing.JFrame {
         jTextFieldItem.setText("");
     }//GEN-LAST:event_jButtonUpdateActionPerformed
 
-    private void jButtonAddItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddItemActionPerformed
-        addItem(jTextFieldItem.getText()); // Mengambil text dari TextField, lalu ditambah ke JList
-        
-        jTextFieldItem.setText(""); // Kosongkan TextField setelah item udah ditambahkan
-    }//GEN-LAST:event_jButtonAddItemActionPerformed
-
     private void jButtonDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteActionPerformed
+        // TODO add your handling code here:
         int index = jListItem.getSelectedIndex();
         dlm.removeElementAt(index);
         
         jTextFieldItem.setText("");
     }//GEN-LAST:event_jButtonDeleteActionPerformed
 
-    private void jButtonClearAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearAllActionPerformed
-        dlm.clear();
-    }//GEN-LAST:event_jButtonClearAllActionPerformed
+    private void jTextFieldItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldItemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,7 +230,7 @@ public class Gui3 extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Gui3().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new GuiCollection().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

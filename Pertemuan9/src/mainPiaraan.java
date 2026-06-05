@@ -6,6 +6,8 @@ LAB             : C1
 */
 
 public class mainPiaraan {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         // Inisialisasi Koleksi antrian Piaran 
         Piaraan K = new Piaraan();

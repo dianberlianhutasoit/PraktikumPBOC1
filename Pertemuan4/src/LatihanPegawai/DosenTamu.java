@@ -12,6 +12,7 @@ import java.time.Period;
 public class DosenTamu extends Dosen {
     /* --- ATRIBUT --- */
     // Dosen tamu menggunakan NIDK dan memiliki batas tanggal kontrak
+    /* ATRIBUT */
     private String NIDK;
     private LocalDate TanggalAkhirKontrak;
 

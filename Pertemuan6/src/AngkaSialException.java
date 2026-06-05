@@ -10,6 +10,9 @@ public class AngkaSialException extends Exception {
      * Membuat exception dengan pesan bawaan
      * untuk memberi tahu bahwa angka 13 tidak diperbolehkan.
      */
+    /* METHOD */
+
+    /* KONSTRUKTOR */
     public AngkaSialException() {
         super("jangan memasukkan angka 13 karena angka sial !!!");
     }

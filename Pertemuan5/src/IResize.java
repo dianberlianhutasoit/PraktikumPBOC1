@@ -7,6 +7,9 @@ LAB             : C1
 
 public interface IResize {
     //menambah ukuran menjadi 10% lebih besar
+    /* METHOD */
+
+    /* MUTATOR */
     public void zoomIn();
 
     //mengurangi ukuran menjadi 10% lebih kecil

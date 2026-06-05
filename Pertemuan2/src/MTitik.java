@@ -5,6 +5,8 @@ Tanggal         : 26/02/2026
 */
 
 public class MTitik {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         // Titik T1 = new Titik();
         // T1.setAbsis(3);
@@ -28,6 +30,7 @@ public class MTitik {
         // System.out.println("Jumlah Objek Titik = " + T2.getCounterTitik());
 
         /* ********************** */
+
         Titik T1 = new Titik();
         Titik T2 = new Titik(2, 2);
         

@@ -10,12 +10,15 @@ public class Titik {
     double ordinat;
 
     /* METHOD */
+
+    /* KONSTRUKTOR */
     //Konstruktor untuk membuat titik (0, 0)
     Titik() {
         absis = 0;
         ordinat = 0;
     }
 
+    /* SELEKTOR */
     //Mengembalikan nilai absis
     double getAbsis() {
         return absis;
@@ -26,6 +29,7 @@ public class Titik {
         return ordinat;
     }
 
+    /* MUTATOR */
     //Mengeset absis titik dengan nilai baru x
     void setAbsis(double x) {
         this.absis = x;
@@ -47,4 +51,4 @@ public class Titik {
         System.out.println("Titik (" + absis + "," + ordinat + ")");
     }
 
-} //end class titik 
+} //end class titik

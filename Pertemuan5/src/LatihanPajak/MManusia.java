@@ -9,6 +9,8 @@ LAB             : C1
 import java.time.LocalDate;
 
 public class MManusia {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         PNS p1 = new PNS("Satriyo", LocalDate.of(2006, 4, 1), "Jl. Seroja", 15000000, "198302032006041002");
         Pengusaha pe1 = new Pengusaha("Adhy", LocalDate.of(2000, 1, 1), "Jl. Air", 55000000, "000-556-773-212-000-5");

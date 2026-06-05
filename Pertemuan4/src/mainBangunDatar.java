@@ -6,6 +6,8 @@ LAB             : C1
 */
 
 public class mainBangunDatar {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         Persegi P1 = new Persegi();
         P1.printInfo();

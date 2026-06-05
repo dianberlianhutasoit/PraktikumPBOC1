@@ -12,8 +12,10 @@ import jdbc.model.Mahasiswa;
 import jdbc.service.MysqlMahasiswaService;
 
 public class Program {
+    /* METHOD */
     static MysqlMahasiswaService service = new MysqlMahasiswaService();
 
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         System.out.println("");
 

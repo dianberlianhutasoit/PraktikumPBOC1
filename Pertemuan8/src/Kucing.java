@@ -17,6 +17,7 @@ public class Kucing extends Anabul {
         this.bobot = 0.0;
     }
 
+    //Konstruktor untuk membuat objek Kucing
     public Kucing(String Nama, double bobot) {
         super(Nama);
         this.bobot = bobot;

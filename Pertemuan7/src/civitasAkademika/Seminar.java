@@ -29,6 +29,8 @@ public class Seminar {
 
     /* METHOD LAIN */
     // Memasukkan objek peserta (Dosen/Mahasiswa) ke dalam array
+
+    /* MUTATOR */
     public void registrasi(CivitasAkademika peserta) {
         if (this.banyakpeserta < this.pesertas.length) {
             this.pesertas[this.banyakpeserta] = peserta;

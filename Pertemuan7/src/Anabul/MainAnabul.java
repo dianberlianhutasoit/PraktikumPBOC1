@@ -8,6 +8,8 @@ LAB             : C1
 */
 
 public class MainAnabul {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         
         System.out.println("--- UJI COBA POLIMORFISME INCLUSION ---");

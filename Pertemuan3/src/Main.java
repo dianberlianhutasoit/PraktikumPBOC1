@@ -6,6 +6,8 @@ LAB             : C1
 */
 
 public class Main {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         /* --- DRIVER DOSEN --- */
 

@@ -9,9 +9,12 @@ LAB             : C1
 import java.time.LocalDate;
 
 public class mainPegawai {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         
         System.out.println("TES CLASS PEGAWAI");
+
         Pegawai P1 = new Pegawai();
         P1.printInfoPegawai();
         System.out.println();

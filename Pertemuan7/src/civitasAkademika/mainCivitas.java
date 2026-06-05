@@ -9,10 +9,13 @@ package civitasAkademika;
  */
 
 public class mainCivitas {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
 
         /* --- DATA DOSEN --- */
         // Membuat objek dosen
+
         Dosen dsn1 = new Dosen("Dr. Budi Santoso", "19800101");
         dsn1.printInfo();
         System.out.println();

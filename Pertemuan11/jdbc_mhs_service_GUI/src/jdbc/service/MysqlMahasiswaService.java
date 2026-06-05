@@ -28,6 +28,8 @@ public class MysqlMahasiswaService {
     /* METHOD LAINNYA */
 
     // Menambah data mahasiswa baru ke database
+
+    /* MUTATOR */
     public void add(Mahasiswa mhs) {
         String query = "INSERT INTO mahasiswa (nama) VALUES (?)";
 
@@ -70,6 +72,8 @@ public class MysqlMahasiswaService {
     }
 
     // Mengambil data satu mahasiswa sesuai pencarian id
+
+    /* SELEKTOR */
     public Mahasiswa getById(int id) {
         String query = "SELECT * FROM mahasiswa WHERE id = ?";
         Mahasiswa mhs = null;

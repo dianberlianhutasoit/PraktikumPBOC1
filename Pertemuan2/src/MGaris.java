@@ -5,7 +5,10 @@ Tanggal         : 03/03/2026
 */
 
 public class MGaris {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
+
         Garis G1 = new Garis();
         Titik T1 = new Titik(2, 4);
         Titik T2 = new Titik(6,10);

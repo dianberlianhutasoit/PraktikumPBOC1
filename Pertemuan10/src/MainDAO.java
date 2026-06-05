@@ -6,6 +6,8 @@ LAB             : C1
 */
 
 public class MainDAO {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         // Persiapan data objek Person
         Person person = new Person("Indra");

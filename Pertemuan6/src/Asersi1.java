@@ -10,7 +10,10 @@ public class Asersi1 {
      * Menunjukkan penggunaan assert untuk memeriksa
      * asumsi bahwa nilai x seharusnya negatif pada blok else.
      */
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
+        /* ATRIBUT */
         int x = 0;
         if (x > 0) {
             System.out.println("x bilangan positif");

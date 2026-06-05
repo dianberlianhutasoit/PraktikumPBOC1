@@ -7,6 +7,8 @@ LAB             : C1
 
 
 public class mainTeman {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         // Inisialisasi Koleksi Teman
         Teman T1 = new Teman();

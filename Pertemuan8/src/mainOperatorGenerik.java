@@ -10,6 +10,7 @@ public class mainOperatorGenerik {
     /* --- METHOD --- */
 
     /* METHOD MAIN */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         // Membuat objek operator karena menggunakan method non-static (biasa)
         OperatorGenerik operator = new OperatorGenerik();

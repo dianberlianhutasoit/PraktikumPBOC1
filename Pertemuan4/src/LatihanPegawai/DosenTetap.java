@@ -12,6 +12,7 @@ import java.time.Period;
 public class DosenTetap extends Dosen {
     /* --- ATRIBUT --- */
     // Dosen Tetap memiliiki NIDN dan BUP yang bernilai tetap
+    /* ATRIBUT */
     private String NIDN;
     private static final int BUP = 65; 
 

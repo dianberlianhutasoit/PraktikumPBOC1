@@ -10,6 +10,7 @@ public class mainDatum {
     /* --- METHOD --- */
 
     /* METHOD MAIN */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
 
         /* DATUM DENGAN TIPE DASAR  */

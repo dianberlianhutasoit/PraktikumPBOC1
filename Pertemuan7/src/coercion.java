@@ -6,9 +6,12 @@ LAB             : C1
 */
 
 public class coercion {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         
         // a. Menampilkan nilai integer 65 kedalam beberapa bentuk (Polimorfisme)
+        /* ATRIBUT */
         int nilaiInt = 65;
         System.out.println("Sebagai integer : " + nilaiInt);       
         System.out.println("Sebagai karakter: " + (char) nilaiInt); 

@@ -11,6 +11,7 @@ public class AngkaSial {
      * Mengecek apakah angka yang diberikan termasuk angka sial.
      * Jika angka bernilai 13, method akan melempar exception buatan sendiri.
      */
+    /* METHOD */
     public void cobaAngka(int angka) throws AngkaSialException {
         if (angka == 13) {
             throw new AngkaSialException();
@@ -22,7 +23,9 @@ public class AngkaSial {
      * Menjalankan contoh pemanggilan method cobaAngka()
      * dan menangani exception jika angka sial dimasukkan.
      */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
+
         AngkaSial as = new AngkaSial();
         try {
             as.cobaAngka(10);

@@ -8,6 +8,8 @@ LAB             : C1
 import java.util.ArrayList;
 
 public class LambdaList {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         ArrayList<String> mahasiswaList = new ArrayList<>();
         mahasiswaList.add("Adi");

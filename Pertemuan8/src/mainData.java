@@ -10,6 +10,7 @@ public class mainData {
     /* --- METHOD --- */
 
     /* METHOD MAIN */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
 
         /* DATA DENGAN TIPE DASAR */

@@ -6,6 +6,8 @@ LAB             : C1
 */
 
 public class MainOverloading {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
                 
         System.out.println("--- OVERLOADING KONSTRUKTOR ---");

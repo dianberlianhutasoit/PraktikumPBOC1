@@ -1,4 +1,6 @@
 public class App {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
         System.out.println("\n Contoh 1: Variables dan Conditionals ");
@@ -11,6 +13,7 @@ public class App {
     // Contoh 1: Penggunaan variable dan conditional (if-else)
     public static void contohVariabelDanKondisional() {
         // Deklarasi dan inisialisasi variable
+        /* ATRIBUT */
         String nama = "Budi";
         int umur = 20;
         double ipk = 3.75;

@@ -8,6 +8,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class LatihanMapLambda {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         Map<String, String> mahasiswaMap = new LinkedHashMap<>();
         mahasiswaMap.put("24060124130096", "Arya");

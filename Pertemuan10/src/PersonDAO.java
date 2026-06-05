@@ -7,5 +7,6 @@ LAB             : C1
 
 public interface PersonDAO{
     // Untuk menyimpan data person
+    /* METHOD */
     public void savePerson(Person p) throws Exception;
 }

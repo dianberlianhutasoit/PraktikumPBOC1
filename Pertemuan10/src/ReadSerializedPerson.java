@@ -8,8 +8,11 @@ LAB             : C1
 import java.io.*;
 
 public class ReadSerializedPerson {
+    /* METHOD */
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         // Inisialisasi wadah objek Person
+        /* ATRIBUT */
         Person person = null;
 
         // Uji membaca objek dari file 

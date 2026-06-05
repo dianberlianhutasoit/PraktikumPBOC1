@@ -17,16 +17,20 @@ public class Titik {
     }
     
     
+    //Konstruktor untuk membuat objek Titik
     public Titik(double absis, double ordinat) {
         this.absis = absis;
         this.ordinat = ordinat;
         counterTitik++;
     }
 
+
+    /* SELEKTOR */
     public static int getCounterTitik() {
         return counterTitik;
     }
 
+    //Menampilkan c ou nt er ti ti k
     public void printCounterTitik() {
         System.out.println(Titik.counterTitik);
     }
@@ -42,6 +46,8 @@ public class Titik {
     }
     
     //Mengeset absis titik dengan nilai baru x
+
+    /* MUTATOR */
     public void setAbsis(double x) {
         this.absis = x;
     }
@@ -62,6 +68,7 @@ public class Titik {
     }
 
 
+    //Mengembalikan nilai k ua dr an
     public int getKuadran() {
         if (absis > 0 && ordinat > 0) {
             return 1;
@@ -80,28 +87,34 @@ public class Titik {
         }
     }
 
+    //Mengembalikan nilai j ar ak pu sa t
     public double getJarakPusat() {
         return Math.sqrt((absis*absis) + (ordinat*ordinat));
     }
 
+    //Mengembalikan nilai j ar ak
     public double getJarak(Titik T) {
         double dx = T.absis - this.absis;
         double dy = T.ordinat - this.ordinat;
         return Math.sqrt((dx*dx) + (dy*dy));
     }
 
+    //Menjalankan proses r ef le ks ix
     public void refleksiX() {
         this.ordinat = -(this.ordinat);
     }
 
+    //Menjalankan proses r ef le ks iy
     public void refleksiY() {
         this.absis = -(this.absis);
     }
 
+    //Mengembalikan nilai r ef le ks ix
     public Titik getRefleksiX() {
         return new Titik(this.absis, -(this.ordinat));
     }
 
+    //Mengembalikan nilai r ef le ks iy
     public Titik getRefleksiY() {
         return new Titik(-(this.absis), this.ordinat);
     }

@@ -16,6 +16,8 @@ public class MysqlUtility {
     /* --- METHOD --- */
 
     // Mengembalikan status koneksi ke database
+
+    /* SELEKTOR */
     public static Connection getConnection() {
         if (koneksi == null) {
             try {

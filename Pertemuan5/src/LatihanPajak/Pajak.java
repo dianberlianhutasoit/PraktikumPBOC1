@@ -9,5 +9,8 @@ LAB             : C1
 
 public interface Pajak {
     // Menghitung besaran pajak
+    /* METHOD */
+
+    /* SELEKTOR */
     public double hitungPajak();
 }

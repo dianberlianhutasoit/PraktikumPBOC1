@@ -6,13 +6,19 @@ LAB             : C1
 */
 
 interface IDiskon {
+    /* METHOD */
+
+    /* SELEKTOR */
     public double hitungDiskon(int harga);
 }
 
 public class DiskonLambda {
+    //Method utama untuk menjalankan program
     public static void main(String[] args) {
         // Tanpa lambda
+
         IDiskon diskonMerdeka = new IDiskon() {
+            //Menghitung d is ko n
             public double hitungDiskon(int harga) {
                 return harga - (harga * 0.3);
             }
